@@ -26,18 +26,8 @@ export const Spotlight = ({
   xOffset = 100,
 }: SpotlightProps = {}) => {
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1.5,
-      }}
-      className="pointer-events-none absolute inset-0 h-full w-full"
-    >
+    <div className="pointer-events-none absolute inset-0 h-screen w-screen">
+      {/* LEFT BEAM */}
       <motion.div
         animate={{
           x: [0, xOffset, 0],
@@ -57,7 +47,7 @@ export const Spotlight = ({
             width: `${width}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 left-0`}
+          className="absolute top-0 left-0"
         />
 
         <div
@@ -67,7 +57,7 @@ export const Spotlight = ({
             width: `${smallWidth}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 left-0 origin-top-left`}
+          className="absolute top-0 left-0 origin-top-left"
         />
 
         <div
@@ -77,10 +67,11 @@ export const Spotlight = ({
             width: `${smallWidth}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 left-0 origin-top-left`}
+          className="absolute top-0 left-0 origin-top-left"
         />
       </motion.div>
 
+      {/* RIGHT BEAM */}
       <motion.div
         animate={{
           x: [0, -xOffset, 0],
@@ -100,7 +91,7 @@ export const Spotlight = ({
             width: `${width}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 right-0`}
+          className="absolute top-0 right-0"
         />
 
         <div
@@ -110,7 +101,7 @@ export const Spotlight = ({
             width: `${smallWidth}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 right-0 origin-top-right`}
+          className="absolute top-0 right-0 origin-top-right"
         />
 
         <div
@@ -120,9 +111,12 @@ export const Spotlight = ({
             width: `${smallWidth}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 right-0 origin-top-right`}
+          className="absolute top-0 right-0 origin-top-right"
         />
       </motion.div>
-    </motion.div>
+
+      {/* 🔻 DARKEN BOTTOM OVERLAY */}
+      <div className="absolute inset-0 z-50 bg-gradient-to-b from-transparent via-transparent to-black/80" />
+    </div>
   );
 };
