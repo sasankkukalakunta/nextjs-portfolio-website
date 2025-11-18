@@ -48,6 +48,7 @@ export const Contact = () => {
       <div className="flex w-full flex-col items-center justify-between gap-4 py-6 text-sm text-neutral-600 dark:text-neutral-400 md:flex-row">
         <p className="text-center md:text-left">
           &copy; {year} Sasank Kukalakunta. All rights reserved.
+
         </p>
 
         <div className="flex items-center space-x-3">
@@ -88,3 +89,4 @@ export const Contact = () => {
     </section>
   );
 };
+

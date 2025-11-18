@@ -6,6 +6,19 @@ import Testimonials from './components/Testimonials'
 import { Contact } from './components/Contact'
 import { FloatingNav } from './components/ui/floating-navbar'
 import { navItems } from './Data/navItems'
+export const metadata = {
+  title: "Sasank Kukalakunta - Full Stack Developer",
+  other: {
+    "script:ld+json": JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Sasank Kukalakunta",
+      url: "https://sasankkukalakunta.com",
+      jobTitle: "Full Stack Developer",
+    }),
+  },
+};
+
 
 const page = () => {
   return (
